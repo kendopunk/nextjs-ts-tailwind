@@ -1,0 +1,50 @@
+/* purgecss start ignore */
+@tailwind base;
+
+body {
+  @apply font-body p-0 bg-white;
+}
+
+/* "twa" = Tailwind Apply */
+div.twa-topnav {
+  @apply flex
+  flex-col
+  /* bg-blue-cornflower */
+  fixed
+  /* h-100 */
+  overflow-hidden
+  p-4
+  shadow-lg
+  top-0
+  w-full
+  md:flex-row
+  md:h-60;
+}
+
+div.twa-leftmenu {
+  @apply flex
+  flex-row
+  flex-wrap
+  mb-4
+  md:border-r-2
+  /* md:border-blue-cornflower */
+  md:border-opacity-25
+  md:flex-col
+  md:h-screen
+  md:pr-2
+  md:mb-0
+  md:mr-2;
+}
+
+div.twa-wrapper {
+  @apply flex
+  flex-col
+  /* mt-105 */
+  p-3
+  md:flex-row
+  /* md:mt-65; */;
+}
+/* purgecss end ignore */
+
+@tailwind components;
+@tailwind utilities;
