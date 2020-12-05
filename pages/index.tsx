@@ -5,25 +5,17 @@
  */
 import React from 'react'
 
+import DefaultLayout from 'components/layouts/DefaultLayout'
+
 const IndexPage: React.FC = (): JSX.Element => {
   return (
-    <div className='wrapper'>
-      <div className='topnav'>foo</div>
-    </div>
+    <DefaultLayout title='Welcome'>
+      <div>asldfkasjfdlk</div>
+    </DefaultLayout>
   )
 }
 
 export default IndexPage
-
-// import DefaultLayout from 'components/layouts/DefaultLayout'
-
-// const IndexPage: React.FC = (): JSX.Element => {
-//   return (
-//     <DefaultLayout title='Welcome'>
-//       <div>asldfkasjfdlk</div>
-//     </DefaultLayout>
-//   )
-// }
 
 /*import Head from 'next/head'
 

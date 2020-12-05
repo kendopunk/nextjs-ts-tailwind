@@ -4,8 +4,8 @@
  * Copyright (c) 2020 Mark Fehrenbacher
  */
 import MainContent from './MainContent'
-import MenuLeft from './MenuLeft'
-import TopMenu from './TopMenu'
+import Menu from './Menu'
+import TopNav from './TopNav'
 import Wrapper from './Wrapper'
 
-export { MainContent, MenuLeft, TopMenu, Wrapper }
+export { MainContent, Menu, TopNav, Wrapper }

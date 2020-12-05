@@ -6,11 +6,11 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { TopMenu, MainContent, MenuLeft, Wrapper } from 'components/nav/'
+import { MainContent, Menu, TopNav, Wrapper } from 'components/nav/'
 
 type DefaultLayoutProps = {
   title?: string
-  children?: any
+  children?: any // rendered under <MainContent>
 }
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ title, children }: DefaultLayoutProps) => (
@@ -21,10 +21,10 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ title, children }: Defaul
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <title>{`nextjs-ts-tailwind: ${title ?? 'Welcome'}`}</title>
     </Head>
-    <TopMenu />
+    <TopNav />
     <Wrapper>
-      <MenuLeft />
-      <MainContent />
+      <Menu />
+      <MainContent>{children}</MainContent>
     </Wrapper>
   </React.Fragment>
 )

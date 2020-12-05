@@ -1,5 +1,5 @@
 /*
- * components/nav/MenuLeft.tsx
+ * components/nav/Menu.tsx
  * Description: Fixed left navigation component
  * Copyright (c) 2020 Mark Fehrenbacher
  */
@@ -12,7 +12,7 @@ type MenuItem = {
   label: string
 }
 
-const MenuLeft: React.FC = (): JSX.Element => {
+const Menu: React.FC = (): JSX.Element => {
   const menuConfig: MenuItem[] = [
     {
       id: 1,
@@ -64,4 +64,4 @@ const MenuLeft: React.FC = (): JSX.Element => {
   )
 }
 
-export default MenuLeft
+export default Menu

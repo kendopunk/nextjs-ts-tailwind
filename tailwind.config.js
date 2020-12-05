@@ -11,12 +11,28 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      // gray: {
-      //   '90': '#e6e6e6',
-      //   '80': '#cccccc',
-      //   '70': '#b3b3b3'
-      // },
+      blue: {
+        lightest: '#e1ecfa',
+        light: '#cd91f2',
+        default: '#4162fa',
+        dark: '#34495e'
+      },
+      body: '#454545',
+      gray: {
+        light: '#e6e6e6',
+        default: '#ccc',
+        dark: '#a6a6a6'
+      },
+      green: {
+        light: '#6ad397',
+        default: '#0f4735',
+        dark: '#16a085'
+      },
       maroon: '#800000',
+      orange: {
+        light: '#ffd699'
+      },
+      purple: '#7368a1',
       white: '#fff'
     },
     fontFamily: {

@@ -5,12 +5,8 @@
  */
 import React from 'react'
 
-const MainContent: React.FC = (): JSX.Element => {
-  return (
-    <div>
-      <div>This MainContent</div>
-    </div>
-  )
+const MainContent: React.FC = ({ children }): JSX.Element => {
+  return <div>{children}</div>
 }
 
 export default MainContent
