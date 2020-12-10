@@ -6,6 +6,6 @@
 import React from 'react'
 
 const Wrapper: React.FC = ({ children }): JSX.Element => (
-  <div className='flex flex-col my-2 p-4 md:flex-row md:my-0'>{children}</div>
+  <div className='flex flex-col min-h-screen my-2 p-4 md:flex-row md:my-0 '>{children}</div>
 )
 export default Wrapper

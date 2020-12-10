@@ -5,59 +5,62 @@
  */
 import React from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+import cn from 'classnames'
+import { useRouter } from 'next/router'
 
-type MenuItem = {
-  id: number
-  route: string
-  label: string
-}
+import { menuConfig } from 'lib/utils'
+
+// bypass server side rendering for <ReactTooltip>
+const ReactTooltip: any = dynamic(() => import('components/nossr/ReactTooltipNoSSR'), {
+  ssr: false
+})
 
 const Menu: React.FC = (): JSX.Element => {
-  const menuConfig: MenuItem[] = [
-    {
-      id: 1,
-      route: '/',
-      label: 'Home'
-    },
-    {
-      id: 2,
-      route: '/users',
-      label: 'GitHub Users'
-    },
-    {
-      id: 3,
-      route: '/buttons',
-      label: 'Some Great Buttons'
-    },
-    {
-      id: 12,
-      route: '/',
-      label: 'Home'
-    },
-    {
-      id: 22,
-      route: '/users',
-      label: 'GitHub Users'
-    },
-    {
-      id: 32,
-      route: '/buttons',
-      label: 'Buttons'
-    }
-  ]
+  const router = useRouter()
 
   return (
-    <div className='twa-leftmenu'>
-      {menuConfig.map((m: MenuItem) => {
+    <div className='flex flex-row flex-wrap mb-4 md:flex-col md:border-r md:border-gray-default md:mb-0 amd:mr-4 md:pr-1 md:w-64'>
+      {menuConfig.map((m: MF.MenuCfgItem, i: number) => {
         return (
-          <div
-            key={m.id}
-            className='border-r border-blue-cornflower mr-2 pr-2 md:border-none md:mb-4'
-          >
-            <Link href={m.route}>
-              <a className='text-blue-cornflower hover:text-blue-midnight'>{m.label}</a>
-            </Link>
-          </div>
+          <React.Fragment key={m.id}>
+            <div className='md:mb-4' data-tip data-for={m.id}>
+              <Link href={m.route}>
+                <a
+                  className={cn([
+                    'p-1',
+                    'rounded',
+                    'text-maroon',
+                    'text-xs',
+                    'md:text-sm',
+                    'hover:text-blue-dark',
+                    m.route == router.pathname ? 'bg-gray-light' : ''
+                  ])}
+                >
+                  {m.menuLabel}
+                </a>
+              </Link>
+              <div className='hidden md:block'>
+                <ReactTooltip
+                  id={m.id}
+                  place='right'
+                  effect='solid'
+                  arrowColor='#e6e6e6'
+                  backgroundColor='#e6e6e6'
+                  textColor='#595959'
+                >
+                  {m.tooltip}
+                </ReactTooltip>
+              </div>
+            </div>
+            {i < menuConfig.length - 1 && (
+              /**
+               * @TW
+               * Hide this separator at medium breakpoint and larger
+               */
+              <div className='mx-2 text-gray-default text-sm md:hidden'>|</div>
+            )}
+          </React.Fragment>
         )
       })}
     </div>

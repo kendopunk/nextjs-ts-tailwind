@@ -12,12 +12,12 @@ module.exports = {
   theme: {
     colors: {
       blue: {
-        lightest: '#e1ecfa',
-        light: '#cd91f2',
+        lightest: '#e6ebfe',
+        light: '#9cadfc',
         default: '#4162fa',
         dark: '#34495e'
       },
-      body: '#454545',
+      body: '#595959',
       gray: {
         light: '#e6e6e6',
         default: '#ccc',

@@ -1,8 +1,27 @@
 /* purgecss start ignore */
 @tailwind base;
 
+/**
+ * apply to <body>
+ */
 body {
   @apply font-body text-body p-0 bg-white;
+}
+
+/**
+ * apply to all <a>
+ */
+a {
+  @apply text-blue-light hover:text-blue-default;
+}
+
+/**
+ * I use this to quickly put a gray border around an element to get context
+ * for margins, padding, position, etc...comes in handy
+ * e.g. <div className="... test-border">...</div>
+ */
+.test-border {
+  @apply border border-gray-dark;
 }
 
 /* purgecss end ignore */
