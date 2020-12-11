@@ -44,7 +44,8 @@ const Menu: React.FC = (): JSX.Element => {
                 <ReactTooltip
                   id={m.id}
                   place='right'
-                  effect='solid'
+                  effect='float'
+                  offset="{'right': 20}"
                   arrowColor='#e6e6e6'
                   backgroundColor='#e6e6e6'
                   textColor='#595959'
