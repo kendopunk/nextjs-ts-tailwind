@@ -7,9 +7,15 @@ import axios from 'axios'
 
 import asyncWrapper from 'lib/utils/async_wrapper'
 
+type GithubUserItem = {
+  id: string
+  login: string
+  avatar_url: string
+}
+
 export const resolvers = {
   Query: {
-    getUsers: async () => {
+    getUsers: async (): Promise<GithubUserItem[]> => {
       const [err, data] = await asyncWrapper(axios.get('https://api.github.com/users'))
       if (err) {
         throw err
@@ -20,7 +26,7 @@ export const resolvers = {
         avatar_url
       }))
     },
-    getUser: async (_, args) => {
+    getUser: async (_, args): Promise<GithubUserItem> => {
       const [err, data] = await asyncWrapper(axios.get(`https://api.github.com/users/${args.name}`))
       if (err) {
         throw err

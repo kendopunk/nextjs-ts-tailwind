@@ -3,6 +3,11 @@
  * Description: About GraphQL and Next.js' /api route
  * Copyright (c) 2020 Mark Fehrenbacher
  */
+/*
+ * pages/graphql/index.tsx
+ * Description: About GraphQL and Next.js' /api route
+ * Copyright (c) 2020 Mark Fehrenbacher
+ */
 import React from 'react'
 
 import DefaultLayout from 'components/layouts/DefaultLayout'

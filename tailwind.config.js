@@ -25,7 +25,7 @@ module.exports = {
       },
       green: {
         light: '#6ad397',
-        default: '#0f4735',
+        default: '#009900',
         dark: '#16a085'
       },
       maroon: '#800000',

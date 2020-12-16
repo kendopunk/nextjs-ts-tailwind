@@ -28,6 +28,7 @@ module.exports = {
     'prettier/prettier': 2,
     'react/display-name': 0,
     'react/jsx-no-bind': 0,
+    'react/prop-types': 0,
     'react/react-in-jsx-scope': 0
   },
   settings: {

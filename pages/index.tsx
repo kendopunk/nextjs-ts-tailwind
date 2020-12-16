@@ -15,11 +15,11 @@ const IndexPage: React.FC = (): JSX.Element => {
       <div>
         <div className='font-bold mb-3 text-2xl'>Welcome</div>
         <p className='mb-3'>
-          I'm using this project as a tuturial of sorts to assist colleagues with the finer points
-          of NextJS, esp. with respect to TailwindCSS integrations, among other things.
+          I&#039;m using this project as a tuturial of sorts to assist colleagues with the finer
+          points of NextJS, esp. with respect to TailwindCSS integrations, among other things.
         </p>
         <p className='mb-3'>
-          The interface is a little spartan, but I'm not much of a designer...it is responsive
+          The interface is a little spartan, but I&#039;m not much of a designer...it is responsive
           though.
         </p>
         <div className='font-bold mb-3 text-xl'>Table of Contents</div>

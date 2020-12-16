@@ -5,7 +5,11 @@
  */
 import React from 'react'
 
-const MainContent: React.FC = ({ children }): JSX.Element => {
+type MainContentPropTypes = {
+  children: any
+}
+
+const MainContent: React.FC<MainContentPropTypes> = ({ children }): JSX.Element => {
   /**
    * @TW
    * The X-axis padding is 0 by default.

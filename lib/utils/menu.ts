@@ -3,7 +3,6 @@
  * Description: Site-wide menu configuration
  * Copyright (c) 2020 Mark Fehrenbacher
  */
-import React from 'react'
 
 const menuConfig: MF.MenuCfgItem[] = [
   {

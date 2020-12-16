@@ -45,7 +45,7 @@ const Menu: React.FC = (): JSX.Element => {
                   id={m.id}
                   place='right'
                   effect='float'
-                  offset="{'right': 20}"
+                  offset={{ right: 20 }}
                   arrowColor='#e6e6e6'
                   backgroundColor='#e6e6e6'
                   textColor='#595959'
