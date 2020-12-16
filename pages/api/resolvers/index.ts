@@ -7,7 +7,7 @@ import axios from 'axios'
 
 import asyncWrapper from 'lib/utils/async_wrapper'
 
-type GithubUserItem = {
+export type GithubUserItem = {
   id: string
   login: string
   avatar_url: string
@@ -26,7 +26,7 @@ export const resolvers = {
         avatar_url
       }))
     },
-    getUser: async (_, args): Promise<GithubUserItem> => {
+    getUser: async (_: GithubUserItem, args: { name: string }): Promise<GithubUserItem> => {
       const [err, data] = await asyncWrapper(axios.get(`https://api.github.com/users/${args.name}`))
       if (err) {
         throw err
