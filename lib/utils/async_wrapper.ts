@@ -4,8 +4,8 @@
  * Copyright (c) 2020 Mark Fehrenbacher
  */
 
-const AsyncWrapper = async (promise: Promise<any>): Promise<any> => {
+const asyncWrapper = async (promise: Promise<any>): Promise<any> => {
   return promise.then((data) => [null, data]).catch((err) => [err, null])
 }
 
-export default AsyncWrapper
+export default asyncWrapper

@@ -9,11 +9,18 @@ import Link from 'next/link'
 import DefaultLayout from 'components/layouts/DefaultLayout'
 import { menuConfig } from 'lib/utils'
 
+import dynamic from 'next/dynamic'
+
+const ButtonStyledComponentsTest = dynamic(() => import('components/NoSSRComponent'), {
+  ssr: false
+})
+
 const IndexPage: React.FC = (): JSX.Element => {
   return (
     <DefaultLayout title='Welcome'>
       <div>
         <div className='font-bold mb-3 text-2xl'>Welcome</div>
+        <ButtonStyledComponentsTest />
         <p className='mb-3'>
           I&#039;m using this project as a tuturial of sorts to assist colleagues with the finer
           points of NextJS, esp. with respect to TailwindCSS integrations, among other things.

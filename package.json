@@ -10,6 +10,9 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix"
   },
   "dependencies": {
+    "@bit/dmytrokorinenko.test-of-bit.button-styled-components-test": "^1.0.1",
+    "@bit/kendopunk.test.my-cool-button": "^0.0.2",
+    "@fontsource/poppins": "^4.0.1",
     "apollo-server-micro": "^2.19.0",
     "axios": "^0.21.0",
     "classnames": "^2.2.6",
@@ -17,7 +20,8 @@
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-tooltip": "^4.2.11"
+    "react-tooltip": "^4.2.11",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
