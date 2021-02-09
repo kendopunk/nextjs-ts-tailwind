@@ -5,22 +5,40 @@
  */
 import React from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 import DefaultLayout from 'components/layouts/DefaultLayout'
 import { menuConfig } from 'lib/utils'
 
-import dynamic from 'next/dynamic'
+const LemonbrewD3Slider: any = dynamic(() => import('components/nossr/LemonbrewD3Slider'), {
+  ssr: false
+})
 
-const ButtonStyledComponentsTest = dynamic(() => import('components/NoSSRComponent'), {
+const D3ImageSlider: any = dynamic(() => import('components/nossr/D3ImageSlider'), {
   ssr: false
 })
 
 const IndexPage: React.FC = (): JSX.Element => {
   return (
     <DefaultLayout title='Welcome'>
+      <div style={{ width: '700px' }}>
+        <LemonbrewD3Slider
+          canvasHeight='75'
+          dragHandler={(val: number) => null}
+          min='0'
+          max='100'
+          startingValue='50'
+        />
+        <D3ImageSlider
+          canvasHeight='75'
+          dragHandler={(val: number) => null}
+          min='1900'
+          max='2000'
+          startingValue='1984'
+        />
+      </div>
       <div>
         <div className='font-bold mb-3 text-2xl'>Welcome</div>
-        <ButtonStyledComponentsTest />
         <p className='mb-3'>
           I&#039;m using this project as a tuturial of sorts to assist colleagues with the finer
           points of NextJS, esp. with respect to TailwindCSS integrations, among other things.
